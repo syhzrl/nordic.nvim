@@ -131,6 +131,9 @@ function M.get_groups()
     G.NeoTreeNormal = { bg = C.bg_neotree }
     G.NeoTreeNormalNC = { bg = C.bg_neotree }
     G.NeoTreeSymbolicLinkTarget = { fg = C.blue2 }
+    G.NeoTreeFloatBorder = { fg = C.yellow.dim, bg = C.none }
+    G.NeoTreeFloatTitle = { fg = C.yellow.dim, bg = C.none }
+    G.NeoTreeTitleBar = { fg = C.yellow.dim, bg = C.none }
 
     -- Noice Flat.
     G.NoiceLspProgressTitle = { fg = C.yellow.base, bg = C.bg, bold = true }
