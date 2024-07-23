@@ -149,11 +149,15 @@ function M.get_groups()
     G.Normal = { fg = C.fg, bg = C.bg } -- normal text
     G.NormalNC = { fg = C.fg, bg = C.bg } -- normal text in non-current windows
     G.NormalSB = { fg = C.fg_sidebar, bg = C.bg_sidebar } -- normal text in sidebar
-    G.NormalFloat = { fg = C.fg_float, bg = C.bg_float } -- Normal text in floating windows.
-    G.FloatBorder = { fg = C.fg_float_border, bg = C.bg_float_border }
+    -- G.NormalFloat = { fg = C.fg_float, bg = C.bg_float } -- Normal text in floating windows.
+    G.NormalFloat = { fg = C.fg_float, bg = C.black0 } -- Normal text in floating windows.
+    -- G.FloatBorder = { fg = C.fg_float_border, bg = C.bg_float_border }
+    G.FloatBorder = { fg = C.yellow.bright, bg = C.black0 }
     G.FloatTitle = { fg = C.yellow.base }
-    G.Pmenu = { bg = C.bg_popup } -- Popup menu: normal item.
-    G.PmenuSel = { bg = C.bg_selected } -- Popup menu: selected item.
+    -- G.Pmenu = { bg = C.bg_popup } -- Popup menu: normal item.
+    G.Pmenu = { bg = C.black0, blend = 0 } -- Popup menu: normal item.
+    G.PmenuSel = { bg = C.gray2 } -- Popup menu: selected item.
+    -- G.PmenuSel = { bg = C.bg_selected } -- Popup menu: selected item.
     G.PmenuSbar = { bg = C.gray2 } -- Popup menu: scrollbar.
     G.PmenuThumb = { bg = C.gray2, fg = C.gray2 } -- Popup menu: Thumb of the scrollbar.
     G.Question = { fg = C.info } -- |hit-enter| prompt and yes/no questions

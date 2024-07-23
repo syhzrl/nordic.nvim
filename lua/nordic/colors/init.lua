@@ -30,9 +30,9 @@ function C.extend_palette()
     C.bg_trouble = C.black0
     C.bg_dark = (options.transparent_bg and C.none) or C.black0
     C.bg_sidebar = (options.transparent_bg and C.none) or C.bg
-    C.bg_popup = (options.transparent_bg and C.none) or C.bg
+    C.bg_popup = C.black0
     C.bg_statusline = C.black0
-    C.bg_selected = U.blend(C.gray2, C.black0, 0.4)
+    C.bg_selected = C.gray1
     C.bg_fold = C.gray2
 
     -- Cursorline Background
