@@ -23,7 +23,11 @@ function C.extend_palette()
     -- Some of the format is from @folke/tokyonight.nvim.
 
     -- Backgrounds
-    C.bg = (options.transparent_bg and C.none) or ((options.swap_backgrounds and C.black1) or C.gray0)
+    C.bg = (options.transparent_bg and C.none) or ((options.swap_backgrounds and C.black1) or C.black0)
+    C.bg_telescope = (options.telescope.transparent and C.none) or C.black0
+    C.bg_neotree = (options.neotree.transparent and C.none) or C.black0
+    C.bg_diffview = (options.diffview.transparent and C.none) or C.black0
+    C.bg_trouble = C.black0
     C.bg_dark = (options.transparent_bg and C.none) or C.black0
     C.bg_sidebar = (options.transparent_bg and C.none) or C.bg
     C.bg_popup = (options.transparent_bg and C.none) or C.bg
@@ -60,7 +64,7 @@ function C.extend_palette()
     C.fg_popup_border = C.border_fg
 
     -- Floating windows
-    C.bg_float = (options.transparent_bg and C.none) or ((options.swap_backgrounds and C.gray0) or C.black1)
+    C.bg_float = (options.transparent_float and C.none) or ((options.swap_backgrounds and C.gray0) or C.black0)
     C.fg_float = C.fg
     C.bg_float_border = C.bg_float
     C.fg_float_border = C.border_fg
@@ -78,7 +82,7 @@ function C.extend_palette()
     C.git = {
         add = C.green.base,
         delete = C.red.base,
-        change = C.blue1,
+        change = C.blue2,
     }
 
     -- Diagnostics

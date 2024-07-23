@@ -18,7 +18,8 @@ function M.get_groups()
     G.Boolean = { link = 'Number' } --  a boolean constant: TRUE  false
     G.Float = { link = 'Number' } --    a floating point constant: 2.3e10
     G.None = { fg = C.none, bg = C.none }
-    G.String = { fg = C.green.base } --   a string constant: "this is a string"
+    G.String = { fg = C.yellow.base } --   a string constant: "this is a string"
+    -- G.String = { fg = C.green.base } --   a string constant: "this is a string"
     G.Character = { fg = C.green.base } --  a character constant: 'c', '\n'
     G.Variable = { fg = C.fg }
     G.Namespace = { fg = C.yellow.dim }
@@ -124,15 +125,15 @@ function M.get_groups()
     G.CursorIM = { fg = C.black0 } -- like Cursor, but used when in IME mode |CursorIM|
     G.CursorColumn = { bg = C.bg_visual, bold = O.cursorline.bold } -- Screen-column at the cursor, when 'cursorcolumn' is set.
     G.CursorLine = { bg = C.bg_visual, bold = O.cursorline.bold } -- Screen-line at the cursor, when 'cursorline' is set.  Low-priority if foreground (ctermfg OR guifg) is not set.
-    G.CursorLineNr = { fg = C.gray5, bold = O.cursorline.bold_number } -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.
+    G.CursorLineNr = { fg = C.red.bright, bold = O.cursorline.bold_number } -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.
     G.CursorLineSign = {}
     G.Directory = { fg = C.blue1 } -- directory names (and other special names in listings)
     G.EndOfBuffer = { fg = C.fg_sidebar } -- filler lines (~) after the end of the buffer.  By default, this is highlighted like |hl-NonText|.
     -- TermCursor  = { } -- cursor in a focused terminal
     -- TermCursorNC= { } -- cursor in an unfocused terminal
     G.ErrorMsg = { fg = C.error } -- error messages on the command line
-    G.VertSplit = { fg = C.border } -- the column separating vertically split windows
-    G.WinSeparator = { fg = C.border_fg, bg = C.border_bg } -- the column separating vertically split windows
+    G.VertSplit = { fg = C.red.dim, bg = C.black0 } -- the column separating vertically split windows
+    G.WinSeparator = { fg = C.red.dim, bg = C.black0 } -- the column separating vertically split windows
     G.Folded = { fg = C.fg_fold, bg = C.bg_fold } -- line used for closed folds
     G.FoldColumn = { bg = C.bg_fold, fg = C.fg_fold } -- 'foldcolumn'
     G.SignColumn = { bg = C.bg_sidebar, fg = C.fg_sidebar } -- column where |signs| are displayed
@@ -157,7 +158,7 @@ function M.get_groups()
     G.PmenuThumb = { bg = C.gray2, fg = C.gray2 } -- Popup menu: Thumb of the scrollbar.
     G.Question = { fg = C.info } -- |hit-enter| prompt and yes/no questions
     G.QuickFixLine = { bg = C.bg_visual, bold = true } -- Current |quickfix| item in the quickfix window. Combined with |hl-CursorLine| when the cursor is there.
-    G.Search = { bg = C.bg_visual, fg = C.yellow.bright, bold = true, underline = true } -- Last search pattern highlighting (see 'hlsearch').  Also used for similar items that need to stand out.
+    G.Search = { bg = C.yellow.base, fg = C.bg_visual, bold = true, underline = true } -- Last search pattern highlighting (see 'hlsearch').  Also used for similar items that need to stand out.
     G.IncSearch = { bg = C.yellow.base, fg = C.bg_visual, bold = true } -- 'incsearch' highlighting; also used for the text replaced with ":s///c"
     G.CurSearch = { link = 'IncSearch' }
     G.SpecialKey = { fg = C.gray5 } -- Unprintable characters: text displayed differently from what it really is.  But not 'listchars' whitespace. |hl-Whitespace|

@@ -22,11 +22,11 @@ function M.get_groups()
     G.DashboardIcon = { fg = C.green.base }
 
     -- Diffview.
-    G.DiffviewNormal = { bg = C.bg_dark, fg = C.fg }
+    G.DiffviewNormal = { bg = C.bg_diffview, fg = C.fg }
     G.DiffviewStatusLine = { bg = C.black0 }
     G.DiffviewFilePanelTitle = { fg = C.orange.base, bold = true }
     G.DiffviewFolderSign = { fg = C.yellow.dim }
-    G.DiffviewFolderName = { bg = C.bg_dark, fg = C.blue1 }
+    G.DiffviewFolderName = { bg = C.bg_diffview, fg = C.blue1 }
 
     -- Gitsigns.
     G.GitSignsAdd = { fg = C.git.add, bg = C.bg_sidebar }
@@ -117,20 +117,20 @@ function M.get_groups()
     G.NvimTreeSymlink = { fg = C.blue2 }
 
     -- Neo tree.
-    G.NeoTreeCursorLine = { link = 'NvimTreeCursorLine' }
-    G.NeoTreeDirectoryIcon = { link = 'NvimTreeFolderIcon' }
-    G.NeoTreeRootName = { link = 'NvimTreeRootFolder' }
-    G.NeoTreeFileName = { link = 'NvimTreeNormal' }
+    G.NeoTreeCursorLine = { bg = C.gray0 }
+    G.NeoTreeDirectoryIcon = { fg = C.yellow.dim }
+    G.NeoTreeRootName = { fg = C.yellow.dim }
+    G.NeoTreeFileName = { fg = C.fg, bg = C.bg_neotree }
     G.NeoTreeFileIcon = { fg = C.blue2 }
     G.NeoTreeFileNameOpened = { fg = C.fg }
-    G.NeoTreeIndentMarker = { link = 'NvimTreeIndentMarker' }
+    G.NeoTreeIndentMarker = { fg = C.gray4 }
     G.NeoTreeGitAdded = { fg = C.git.add }
     G.NeoTreeGitConflict = { fg = C.magenta.bright }
     G.NeoTreeGitModified = { fg = C.git.change }
-    G.NeoTreeGitUntracked = { fg = C.fg_sidebar }
-    G.NeoTreeNormal = { link = 'NvimTreeNormal' }
-    G.NeoTreeNormalNC = { link = 'NvimTreeNormalNC' }
-    G.NeoTreeSymbolicLinkTarget = { link = 'NvimTreeSymlink' }
+    G.NeoTreeGitUntracked = { fg = C.orange.base }
+    G.NeoTreeNormal = { bg = C.bg_neotree }
+    G.NeoTreeNormalNC = { bg = C.bg_neotree }
+    G.NeoTreeSymbolicLinkTarget = { fg = C.blue2 }
 
     -- Noice Flat.
     G.NoiceLspProgressTitle = { fg = C.yellow.base, bg = C.bg, bold = true }
@@ -229,25 +229,25 @@ function M.get_groups()
     G.NotifyTRACEBody = { fg = C.fg }
 
     -- Telescope Classic.
-    G.TelescopeNormal = { bg = C.bg }
-    G.TelescopePromptNormal = { bg = C.bg }
-    G.TelescopeResultsNormal = { bg = C.bg }
-    G.TelescopePreviewNormal = { bg = C.bg }
+    G.TelescopeNormal = { bg = C.bg_telescope }
+    G.TelescopePromptNormal = { bg = C.bg_telescope }
+    G.TelescopeResultsNormal = { bg = C.bg_telescope }
+    G.TelescopePreviewNormal = { bg = C.bg_telescope }
     G.TelescopePreviewLine = { bg = C.gray2 }
-    G.TelescopeSelection = { bg = C.bg, fg = C.yellow.bright, bold = false }
-    G.TelescopeSelectionCaret = { fg = C.yellow.bright, bg = C.bg, bold = true }
-    G.TelescopePreviewTitle = { fg = C.white0, bg = C.bg, bold = true }
-    G.TelescopeResultsTitle = { fg = C.white0, bg = C.bg, bold = true }
-    G.TelescopePromptTitle = { fg = C.white0, bg = C.bg, bold = true }
-    G.TelescopeTitle = { fg = C.white0, bg = C.bg, bold = true }
-    G.TelescopeBorder = { fg = C.white0, bg = C.bg }
-    G.TelescopePromptBorder = { fg = C.white0, bg = C.bg }
-    G.TelescopeResultsBorder = { fg = C.white0, bg = C.bg }
-    G.TelescopePreviewBorder = { fg = C.white0, bg = C.bg }
+    G.TelescopeSelection = { bg = C.bg_telescope, fg = C.red.bright, bold = false }
+    G.TelescopeSelectionCaret = { fg = C.red.bright, bg = C.bg_telescope, bold = true }
+    G.TelescopePreviewTitle = { fg = C.white0, bg = C.bg_telescope, bold = true }
+    G.TelescopeResultsTitle = { fg = C.white0, bg = C.bg_telescope, bold = true }
+    G.TelescopePromptTitle = { fg = C.red.dim, bg = C.bg_telescope, bold = true }
+    G.TelescopeTitle = { fg = C.white0, bg = C.bg_telescope, bold = true }
+    G.TelescopeBorder = { fg = C.white0, bg = C.bg_telescope }
+    G.TelescopePromptBorder = { fg = C.red.dim, bg = C.bg_telescope }
+    G.TelescopeResultsBorder = { fg = C.white0, bg = C.bg_telescope }
+    G.TelescopePreviewBorder = { fg = C.white0, bg = C.bg_telescope }
     G.TelescopeMatching = { bold = true }
-    G.TelescopePromptPrefix = { bg = C.bg, fg = C.orange.bright }
-    G.TelescopeMultiIcon = { fg = C.yellow.bright, bg = C.bg, bold = true }
-    G.TelescopeMultiSelection = { bg = C.bg }
+    G.TelescopePromptPrefix = { bg = C.bg_telescope, fg = C.orange.bright }
+    G.TelescopeMultiIcon = { fg = C.red.bright, bg = C.bg_telescope, bold = true }
+    G.TelescopeMultiSelection = { fg = C.red.bright, bg = C.bg_telescope }
 
     -- Telescope Flat.
     if O.telescope.style == 'flat' then
@@ -480,7 +480,7 @@ function M.get_groups()
     G['@neorg.headings.6.prefix'] = { link = '@markup.heading.6' }
 
     -- Trouble.
-    G.TroubleNormal = { bg = C.bg_float }
+    G.TroubleNormal = { bg = C.bg_trouble }
     G.TroubleText = { fg = C.fg }
     G.TroubleCount = { fg = C.white1, bg = C.gray2 }
     G.TroubleIndent = { fg = C.gray1 }

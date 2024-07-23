@@ -11,6 +11,8 @@ local defaults = {
     italic_comments = true,
     -- Enable general editor background transparency.
     transparent_bg = false,
+    -- Enable general editor float transparency.
+    transparent_float = false,
     -- Enable brighter float border.
     bright_border = false,
     -- Adjusts some colors to make the theme a bit nicer (imo).
@@ -36,7 +38,13 @@ local defaults = {
     },
     telescope = {
         -- Available styles: `classic`, `flat`.
-        style = 'flat',
+        style = 'classic',
+        -- Option to enable transparency for Telescope
+        transparent = false,
+    },
+    neotree = {
+        -- Option to enable transparency for NeoTree
+        transparent = false,
     },
     leap = {
         -- Dims the backdrop when using leap.
@@ -45,6 +53,9 @@ local defaults = {
     ts_context = {
         -- Enables dark background for treesitter-context window
         dark_background = true,
+    },
+    diffview = {
+        transparent = false,
     },
 }
 
