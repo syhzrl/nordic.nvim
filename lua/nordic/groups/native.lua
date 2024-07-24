@@ -18,8 +18,7 @@ function M.get_groups()
     G.Boolean = { link = 'Number' } --  a boolean constant: TRUE  false
     G.Float = { link = 'Number' } --    a floating point constant: 2.3e10
     G.None = { fg = C.none, bg = C.none }
-    G.String = { fg = C.yellow.base } --   a string constant: "this is a string"
-    -- G.String = { fg = C.green.base } --   a string constant: "this is a string"
+    G.String = { fg = C.green.base } --   a string constant: "this is a string"
     G.Character = { fg = C.green.base } --  a character constant: 'c', '\n'
     G.Variable = { fg = C.fg }
     G.Namespace = { fg = C.yellow.dim }
@@ -48,7 +47,7 @@ function M.get_groups()
     G.Special = { fg = C.blue1 } -- (preferred) any special symbol
     -- SpecialChar   = { } --  special character in a constant
     -- Tag           = { } --    you can use CTRL-] on this
-    G.Delimiter = { italic = true, fg = C.gray5 } --  character that needs attention
+    G.Delimiter = { italic = false, fg = C.gray5 } --  character that needs attention
     -- SpecialComment= { } -- special things inside a comment
     -- Debug         = { } --    debugging statements
     G.Underlined = { underline = true } -- (preferred) text that stands out, HTML links
@@ -124,7 +123,8 @@ function M.get_groups()
     G.lCursor = { fg = C.black0 } -- the character under the cursor when |language-mapping| is used (see 'guicursor')
     G.CursorIM = { fg = C.black0 } -- like Cursor, but used when in IME mode |CursorIM|
     G.CursorColumn = { bg = C.bg_visual, bold = O.cursorline.bold } -- Screen-column at the cursor, when 'cursorcolumn' is set.
-    G.CursorLine = { bg = C.bg_visual, bold = O.cursorline.bold } -- Screen-line at the cursor, when 'cursorline' is set.  Low-priority if foreground (ctermfg OR guifg) is not set.
+    -- G.CursorLine = { bg = C.bg_visual, bold = O.cursorline.bold } -- Screen-line at the cursor, when 'cursorline' is set.  Low-priority if foreground (ctermfg OR guifg) is not set.
+    G.CursorLine = { bg = C.gray0, bold = O.cursorline.bold } -- Screen-line at the cursor, when 'cursorline' is set.  Low-priority if foreground (ctermfg OR guifg) is not set.
     G.CursorLineNr = { fg = C.red.bright, bold = O.cursorline.bold_number } -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.
     G.CursorLineSign = {}
     G.Directory = { fg = C.blue1 } -- directory names (and other special names in listings)

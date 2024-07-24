@@ -8,7 +8,7 @@ local defaults = {
     -- Enable bold keywords.
     bold_keywords = false,
     -- Enable italic comments.
-    italic_comments = true,
+    italic_comments = false,
     -- Enable general editor background transparency.
     transparent_bg = false,
     -- Enable general editor float transparency.

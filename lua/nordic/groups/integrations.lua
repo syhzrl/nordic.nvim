@@ -302,7 +302,7 @@ function M.get_groups()
     G['@string.regex'] = { fg = C.magenta.bright } -- For regexes.
     --- Functions
     G['@constructor'] = { link = 'Function' } -- For constructor calls and definitions: `= { }` in Lua, and Java constructors.
-    G['@parameter'] = { fg = C.fg, italic = true } -- For parameters of a function.
+    G['@parameter'] = { fg = C.fg, italic = false } -- For parameters of a function.
     G['@parameter.builtin'] = { link = 'Builtin' } -- For builtin parameters of a function, e.g. "..." or Smali's pG[1-99]
     --- Keywords
     G['@keyword'] = { link = 'Keyword' } -- For keywords that don't fall in previous categories.
