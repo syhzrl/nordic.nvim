@@ -120,7 +120,7 @@ function M.get_groups()
     G.NeoTreeCursorLine = { bg = C.gray0 }
     G.NeoTreeDirectoryIcon = { fg = C.yellow.dim }
     G.NeoTreeRootName = { fg = C.yellow.dim }
-    G.NeoTreeFileName = { fg = C.fg, bg = C.bg_neotree }
+    G.NeoTreeFileName = { fg = C.fg, bg = C.none }
     G.NeoTreeFileIcon = { fg = C.blue2 }
     G.NeoTreeFileNameOpened = { fg = C.fg }
     G.NeoTreeIndentMarker = { fg = C.gray4 }
