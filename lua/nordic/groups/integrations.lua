@@ -111,7 +111,7 @@ function M.get_groups()
     G.NvimTreeGitDeleted = { fg = C.gray4 }
     G.NvimTreeGitStaged = { fg = C.gray4 }
     G.NvimTreeIndentMarker = { fg = C.gray4 }
-    G.NvimTreeWinSeparator = { fg = C.bg_dark, bg = C.bg }
+    G.NvimTreeWinSeparator = { fg = C.bg_dark, bg = C.bg_neotree }
     G.NvimTreeCursorLine = { bg = C.gray1 }
     G.NvimTreeCursor = { bg = C.none, fg = C.none }
     G.NvimTreeSymlink = { fg = C.blue2 }
