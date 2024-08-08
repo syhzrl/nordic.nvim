@@ -98,8 +98,8 @@ function M.get_groups()
     G.MiniStatuslineInactive = { bg = LC.inactive.a.bg, fg = LC.inactive.a.fg, bold = LC.inactive.a.gui == 'bold' }
 
     -- Nvim tree.
-    G.NvimTreeNormal = { fg = C.fg, bg = C.bg }
-    G.NvimTreeNormalNC = { fg = C.fg, bg = C.bg }
+    G.NvimTreeNormal = { fg = C.fg, bg = C.bg_neotree }
+    G.NvimTreeNormalNC = { fg = C.fg, bg = C.bg_neotree }
     G.NvimTreeFolderName = { fg = C.blue1 }
     G.NvimTreeOpenedFolderName = { link = 'NvimTreeFolderName' }
     G.NvimTreeEmptyFolderName = { link = 'NvimTreeFolderName' }
