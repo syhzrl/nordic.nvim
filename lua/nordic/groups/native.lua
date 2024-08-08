@@ -176,8 +176,8 @@ function M.get_groups()
     G.TabLineFill = { bg = C.black0, fg = C.none } -- tab pages line, where there are no labels
     G.TabLineSel = { fg = C.fg_bright, bg = C.bg } -- tab pages line, active tab page label
     G.Title = { fg = C.fg_bright, bold = true } -- titles for output from ":set all", ":autocmd" etc.
-    G.Visual = { bg = C.bg_visual, bold = O.cursorline.bold } -- Visual mode selection
-    G.VisualNOS = { bg = C.bg_visual } -- Visual mode selection when vim is "Not Owning the Selection".
+    G.Visual = { bg = C.gray1, bold = O.cursorline.bold } -- Visual mode selection
+    G.VisualNOS = { bg = C.gray1 } -- Visual mode selection when vim is "Not Owning the Selection".
     G.WarningMsg = { fg = C.warning } -- warning messages
     G.Whitespace = { fg = C.gray4 } -- "nbsp", "space", "tab" and "trail" in 'listchars'
     G.WildMenu = { bg = C.bg_visual } -- current match in 'wildmenu' completion
