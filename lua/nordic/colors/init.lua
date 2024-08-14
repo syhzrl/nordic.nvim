@@ -72,10 +72,10 @@ function C.extend_palette()
     -- Diffs
     local diff_blend = 0.2
     C.diff = {
-        change0 = U.blend(C.blue1, C.bg, 0.05),
-        change1 = U.blend(C.blue2, C.bg, diff_blend),
-        add = U.blend(C.green.base, C.bg, diff_blend),
-        delete = U.blend(C.red.base, C.bg, diff_blend),
+        change0 = U.blend(C.blue1, C.black0, 0.05),
+        change1 = U.blend(C.blue2, C.black0, diff_blend),
+        add = U.blend(C.green.base, C.black0, diff_blend),
+        delete = U.blend(C.red.base, C.black0, diff_blend),
     }
 
     -- Git
